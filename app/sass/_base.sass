@@ -7,3 +7,39 @@
 	background: #000
 	pointer-events: none
 	opacity: 0
+.flex
+	display: flex 
+
+
+.base-title
+	font-family: Playfair Display
+	font-style: normal
+	font-weight: normal
+	line-height: normal
+	font-size: 45px
+	letter-spacing: -0.01em
+	color: #000000
+
+.base-btn
+	text-transform: uppercase
+	border: 1px solid $orange2
+	display: inline-block
+	min-width: 160px
+	padding: 5px 
+	color: $orange2
+	border-radius: 50px
+	text-align: center
+	transition: all 0.3s ease
+	&:hover,&:focus
+		text-decoration: none
+		color: #fff
+		background-color: $orange2
+		svg
+			stroke: #fff
+	.link-text
+		display: inline-block
+		margin-right: 5px
+	svg
+		position: relative
+		top: -2px
+

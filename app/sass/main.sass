@@ -22,12 +22,13 @@ html
 	overflow-x: hidden
 
 body
-	font-size: 16px
+	font-size: 17px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $default-font
+	font-family: 'IBM Plex Sans'
 	overflow-x: hidden
+	color: #827874
 	background-color: #EEEEEE
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
@@ -129,7 +130,71 @@ b, strong
 	margin: 0 auto
 	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
 
+.search-tours
+	font-family: 'Playfair Display'
+	font-weight: 700
+	font-size: 40px
+	color: #C4C4C4
+	min-height: 300px
+	h3
+		margin: auto
 
+.content-item
+	display: flex
+	&:nth-child(even)
+		flex-direction: row-reverse
+		.item-content
+			padding-left: 10%
+	.title
+		padding-bottom: 70px
+		background-image: url(../img/title-bg.svg)	
+		background-repeat: no-repeat
+		background-position: 0 75%
+	.item-block
+		width: 50%
+		min-height: 500px
+	.item-image
+		max-height: 500px
+		background-size: cover
+		background-position: top center
+	.item-content
+		padding-left: 5%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		background-color: #fff
+		background-image: url(../img/line.svg)
+		background-size: cover
+		align-items: baseline
+	p
+		line-height: 35px
+		color: #827874
+		max-width: 85%
+		margin-bottom: 30px
+
+.special-offer
+	min-height: 700px
+	background-position: bottom center
+	background-size: cover
+	background-repeat: no-repeat
+	display: flex
+	flex-direction: column
+	justify-content: center
+	.item-content
+		color: #fff
+		max-width: 850px
+		padding-left: 15%
+		p
+			line-height: 35px
+			margin-bottom: 40px
+	.title
+		color: #fff
+		padding-bottom: 40px
+	.base-btn
+		border-color: #fff
+		color: #fff
+		svg
+			stroke: #fff	
 
 
 @import "media" // Always at the end
