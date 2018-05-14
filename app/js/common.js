@@ -1,5 +1,6 @@
 (function() {
 
+
     var navEl = document.querySelector('nav.menu'),
         revealer = new RevealFx(navEl),
         closeCtrl = navEl.querySelector('.btn--close');
@@ -39,11 +40,3 @@
     }
 
 })();
-
-(function(){
-    $('.btn--menu').on('click', function() {
-        alert("some");
-        $(this).toggle();
-        /* Act on the event */
-    });
-});
