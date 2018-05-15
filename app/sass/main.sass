@@ -3,6 +3,7 @@
 @import "libs"
 @import "animation"
 @import "base"
+@import "blog"
 
 ::placeholder
 	color: #666
@@ -158,6 +159,8 @@ b, strong
 		max-height: 500px
 		background-size: cover
 		background-position: top center
+	.content__image
+		height: 100%	
 	.item-content
 		padding-left: 5%
 		display: flex
@@ -293,7 +296,9 @@ b, strong
 			font-weight: 300
 			line-height: 37px
 			font-size: 24px
+			text-decoration: none
 			&:hover
+				text-decoration: none
 				span
 					text-decoration: none
 			svg

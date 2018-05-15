@@ -40,6 +40,7 @@ gulp.task('js', function() {
 		'app/js/anime.min.js',
 		'app/js/scrollMonitor.js',
 		'app/js/main.js',
+		'app/libs/waypoint/jquery.waypoints.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

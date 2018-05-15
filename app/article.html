@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Velvet Travel</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<script>
+    document.documentElement.className = 'js';
+	</script>
+
+</head>
+
+<body class="loading">
+  <main>
+    <div class="aside-panel">
+    	<a href="index.html" class="logo"><img src="img/logo-small.svg" alt="Velvet Travel"></a>
+      <button class="btn btn--menu"><img class="icon icon--menu" src="img/menu-icon-open.svg"></button>
+      <ul class="social-list">
+      	<li><a href="#"><img src="img/twitter.svg" alt=""></a></li>
+      	<li><a href="#"><img src="img/fb.svg" alt=""></a></li>
+      	<li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
+      </ul>
+    </div>
+
+    <nav class="menu">
+      <button class="btn btn--close"><img class="icon icon--cross" src="img/menu-icon-close.svg"></button>
+      <ul class="menu__inner">
+          <li class="menu__item"><a class="menu__link" href="#">Ранее бронирование</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Туры на вчера</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Авторские туры</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Специальные предложения</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Travel blog</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <section class="header-blog" style="background-image: url(img/blog-single.jpg);"></section>
+
+    <div class="container">
+      <div class="col-12">
+        <ul class="pagination">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Blogger stories</a></li>
+          <li class="active"><a href="#">Article storie</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="blog blog-page">
+      <div class="container">
+        <div class="row">
+          <h2 class="title base-title"><span>Duis aute irure dolor in reprehenderit in voluptate velit</span></h2>
+        </div>
+        <div class="row">
+          <div class="col-12 single-article">
+            <div class="single-article-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ullam, recusandae amet rerum ipsum itaque facilis ducimus et labore dignissimos in, ipsam. Dolorem magni, sapiente facilis dolorum quas vitae ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi amet deleniti voluptas velit quaerat, rerum, tempora, veritatis officiis reprehenderit tempore quisquam officia quod laborum perspiciatis magnam nostrum! Quod, possimus est!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ullam, recusandae amet rerum ipsum itaque facilis ducimus et labore dignissimos in, ipsam. Dolorem magni, sapiente facilis dolorum quas vitae ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi amet deleniti voluptas velit quaerat, rerum, tempora, veritatis officiis reprehenderit tempore quisquam officia quod laborum perspiciatis magnam nostrum! Quod, possimus est!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ullam, recusandae amet rerum ipsum itaque facilis ducimus et labore dignissimos in, ipsam. Dolorem magni, sapiente facilis dolorum quas vitae ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi amet deleniti voluptas velit quaerat, rerum, tempora, veritatis officiis reprehenderit tempore quisquam officia quod laborum perspiciatis magnam nostrum! Quod, possimus est! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quidem natus incidunt quod, blanditiis suscipit voluptatum amet id cum dicta repellat impedit dolorem perspiciatis facilis dolores, ducimus debitis repudiandae veniam.</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="single-article-image">
+              <img src="img/article.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 footer-logo">
+            <img src="img/logo.svg" alt="">
+          </div>
+          <div class="col-12">
+            <ul class="social-list">
+              <li><a href="#"><img src="img/twitter-w.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/fb-w.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/instagram-w.svg" alt=""></a></li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <div class="copyright"> © velvet-travel.com  2018</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+  </main>
+	<script src="js/scripts.min.js"></script>
+  <script>
+    (function(){
+      setTimeout(init, 1000);
+
+      function init() {
+        document.body.classList.remove('loading');
+
+          var scrollElemToWatch_1 = document.getElementById('rev-1'),       
+          watcher_1 = scrollMonitor.create(scrollElemToWatch_1, -300),
+          rev1 = new RevealFx(scrollElemToWatch_1, {
+            revealSettings : {
+              bgcolor: '#FF633B',
+              onCover: function(contentEl, revealerEl) {
+                contentEl.style.opacity = 1;
+              }
+            }
+          }),
+          scrollElemToWatch_2 = document.getElementById('rev-2'),
+          watcher_2 = scrollMonitor.create(scrollElemToWatch_2, -300),
+          rev2 = new RevealFx(scrollElemToWatch_2, {
+            revealSettings : {
+              bgcolor: '#FF633B',
+              direction: 'rl',
+              onCover: function(contentEl, revealerEl) {
+                contentEl.style.opacity = 1;
+              }
+            }
+          }),
+          scrollElemToWatch_3 = document.getElementById('rev-3'),
+          watcher_3 = scrollMonitor.create(scrollElemToWatch_3, -300),
+          rev3 = new RevealFx(scrollElemToWatch_3, {
+            revealSettings : {
+              bgcolor: '#FF633B',
+              onCover: function(contentEl, revealerEl) {
+                contentEl.style.opacity = 1;
+              }
+            }
+          }),
+          scrollElemToWatch_4 = document.getElementById('rev-4'),
+          watcher_4 = scrollMonitor.create(scrollElemToWatch_4, -300),
+          rev4 = new RevealFx(scrollElemToWatch_4, {
+            revealSettings : {
+              bgcolor: '#FF633B',
+              direction: 'rl',
+              onCover: function(contentEl, revealerEl) {
+                contentEl.style.opacity = 1;
+              }
+            }
+          })
+
+         watcher_1.enterViewport(function() {
+          rev1.reveal();
+          watcher_1.destroy();
+        });
+
+          watcher_2.enterViewport(function() {
+          rev2.reveal();
+          watcher_2.destroy();
+        });
+          watcher_3.enterViewport(function() {
+          rev3.reveal();
+          watcher_3.destroy();
+        });
+
+        watcher_4.enterViewport(function() {
+          rev4.reveal();
+          watcher_4.destroy();
+        });
+
+      }// End init
+
+    })();
+  </script>
+</body>
+</html>

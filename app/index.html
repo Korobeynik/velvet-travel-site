@@ -29,7 +29,7 @@
 
 </head>
 
-<body class="">
+<body class="loading">
   <main>
     <div class="aside-panel">
     	<a href="index.html" class="logo"><img src="img/logo-small.svg" alt="Velvet Travel"></a>
@@ -48,7 +48,7 @@
           <li class="menu__item"><a class="menu__link" href="#">Туры на вчера</a></li>
           <li class="menu__item"><a class="menu__link" href="#">Авторские туры</a></li>
           <li class="menu__item"><a class="menu__link" href="#">Специальные предложения</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Travel blog</a></li>
+          <li class="menu__item"><a class="menu__link" href="blog.html">Travel blog</a></li>
           <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
       </ul>
     </nav>
@@ -64,9 +64,16 @@
 
     <section class="search-tours flex flex-center"><h3>Место для модуля поиска туров</h3></section>
 
+
+
+      
+  
+
     <section class="content-grid">
+
       <div class="content-item">
-        <div class="item-block item-image block-revealer" style="background-image: url(img/img1.jpg);">
+        <div id="rev-1" class="item-block item-image content__image-wrap content__image-wrap--half">
+          <img class="content__image" src="img/img1.jpg" alt="">
         </div>
         <div class="item-block item-content">
           <h2 class="title base-title">Раннее бронирование</h2>
@@ -80,8 +87,8 @@
         </div>
       </div>
       <div class="content-item">
-        <div class="item-block item-image" style="background-image: url(img/img2.jpg);">
-          <!-- <img src="img/img2.jpg" alt=""> -->
+        <div id="rev-2" class="item-block item-image content__image-wrap content__image-wrap--half">
+          <img class="content__image" src="img/img2.jpg" alt="">
         </div>
         <div class="item-block item-content">
           <h2 class="title base-title">Туры на вчера</h2>
@@ -95,7 +102,9 @@
         </div>
       </div>
       <div class="content-item">
-        <div class="item-block item-image" style="background-image: url(img/img3.jpg);"></div>
+        <div id="rev-3" class="item-block item-image content__image-wrap content__image-wrap--half">
+          <img class="content__image" src="img/img3.jpg" alt="">
+        </div>
         <div class="item-block item-content">
           <h2 class="title base-title">Авторские туры</h2>
           <p>Cras maximus justo ullamcorper ipsum laoreet, sit amet dapibus augue maximus. Curabitur auctor sapien ullamcorper, cursus sem sed, maximus erat. Mauris pulvinar vestibulum augue, eu finibus urna. Etiam nibh diam, volutpat eu posuere sed, placerat sit amet dui.</p>
@@ -108,7 +117,9 @@
         </div>
       </div>
       <div class="content-item">
-        <div class="item-block item-image" style="background-image: url(img/img4.jpg);"></div>
+       <div id="rev-4" class="item-block item-image content__image-wrap content__image-wrap--half">
+          <img class="content__image" src="img/img4.jpg" alt="">
+        </div>
         <div class="item-block item-content">
           <h2 class="title base-title">Топ 5 отелей <br> для отдыха семьей</h2>
           <p>Cras maximus justo ullamcorper ipsum laoreet, sit amet dapibus augue maximus. Curabitur auctor sapien ullamcorper, cursus sem sed, maximus erat. Mauris pulvinar vestibulum augue, eu finibus urna. Etiam nibh diam, volutpat eu posuere sed, placerat sit amet dui.</p>
@@ -245,6 +256,7 @@
       </div>
     </footer>
 
+
   </main>
 	<script src="js/scripts.min.js"></script>
   <script>
@@ -253,7 +265,70 @@
 
       function init() {
         document.body.classList.remove('loading');
-      }
+
+          var scrollElemToWatch_1 = document.getElementById('rev-1'),       
+          watcher_1 = scrollMonitor.create(scrollElemToWatch_1, -300),
+          rev1 = new RevealFx(scrollElemToWatch_1, {
+            revealSettings : {
+              bgcolor: '#FF633B',
+              onCover: function(contentEl, revealerEl) {
+                contentEl.style.opacity = 1;
+              }
+            }
+          }),
+          scrollElemToWatch_2 = document.getElementById('rev-2'),
+          watcher_2 = scrollMonitor.create(scrollElemToWatch_2, -300),
+          rev2 = new RevealFx(scrollElemToWatch_2, {
+            revealSettings : {
+              bgcolor: '#FF633B',
+              direction: 'rl',
+              onCover: function(contentEl, revealerEl) {
+                contentEl.style.opacity = 1;
+              }
+            }
+          }),
+          scrollElemToWatch_3 = document.getElementById('rev-3'),
+          watcher_3 = scrollMonitor.create(scrollElemToWatch_3, -300),
+          rev3 = new RevealFx(scrollElemToWatch_3, {
+            revealSettings : {
+              bgcolor: '#FF633B',
+              onCover: function(contentEl, revealerEl) {
+                contentEl.style.opacity = 1;
+              }
+            }
+          }),
+          scrollElemToWatch_4 = document.getElementById('rev-4'),
+          watcher_4 = scrollMonitor.create(scrollElemToWatch_4, -300),
+          rev4 = new RevealFx(scrollElemToWatch_4, {
+            revealSettings : {
+              bgcolor: '#FF633B',
+              direction: 'rl',
+              onCover: function(contentEl, revealerEl) {
+                contentEl.style.opacity = 1;
+              }
+            }
+          })
+
+         watcher_1.enterViewport(function() {
+          rev1.reveal();
+          watcher_1.destroy();
+        });
+
+          watcher_2.enterViewport(function() {
+          rev2.reveal();
+          watcher_2.destroy();
+        });
+          watcher_3.enterViewport(function() {
+          rev3.reveal();
+          watcher_3.destroy();
+        });
+
+        watcher_4.enterViewport(function() {
+          rev4.reveal();
+          watcher_4.destroy();
+        });
+
+      }// End init
 
     })();
   </script>
