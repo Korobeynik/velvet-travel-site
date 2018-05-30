@@ -55,19 +55,48 @@
       </ul>
     </nav>
 
+   <header class="header">
+
     <div class="slider owl-carousel">
-      <div class="slider-item"><img src="img/main-bg.jpg" alt=""></div>
-      <div class="slider-item"><img src="img/main-bg.jpg" alt=""></div>
-      <div class="slider-item"><img src="img/main-bg.jpg" alt=""></div>
+
+      <div class="slider-item" style="background-image: url(img/main-bg.jpg);">
+        <div class="header-composition">
+          <div class="composition-logo">
+            <a href="index.html" class="main-logo"><img src="img/logo.svg" alt="Velvet Travel"></a>
+          </div>
+          <div class="composition-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(img/slide1.jpg);">
+        <div class="header-composition">
+          <div class="composition-logo">
+            <a href="index.html" class="main-logo"><img src="img/logo.svg" alt="Velvet Travel"></a>
+          </div>
+          <div class="composition-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(img/slide2.jpg);">
+        <div class="header-composition">
+          <div class="composition-logo">
+            <a href="index.html" class="main-logo"><img src="img/logo.svg" alt="Velvet Travel"></a>
+          </div>
+          <div class="composition-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(img/slide3.jpg);">
+        <div class="header-composition">
+          <div class="composition-logo">
+            <a href="index.html" class="main-logo"><img src="img/logo.svg" alt="Velvet Travel"></a>
+          </div>
+          <div class="composition-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        </div>
+      </div>
+
     </div>
 
-    <header class="header">
-    	<div class="header-composition">
-    		<div class="composition-logo">
-    			<a href="index.html" class="main-logo"><img src="img/logo.svg" alt="Velvet Travel"></a>
-    		</div>
-    		<div class="composition-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-    	</div>
     </header>
 
     <section class="search-tours flex flex-center"><h3>Место для модуля поиска туров</h3></section>
@@ -198,6 +227,19 @@
       </div>
     </section>
 
+    <section class="special-offer" style="background-image: url(img/tur2.jpg);"> 
+      <div class="item-block item-content">
+          <h2 class="title base-title">Клуб путешественников</h2>
+          <p>Cras maximus justo ullamcorper ipsum laoreet, sit amet dapibus augue maximus. Curabitur auctor sapien ullamcorper, cursus sem sed, maximus erat. Mauris pulvinar vestibulum augue, eu finibus urna. Etiam nibh diam, volutpat eu posuere sed, placerat sit amet dui.</p>
+          <a href="#" class="btn base-btn">
+            <span class="link-text">Найти тур</span>
+            <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.3536 0.353553C16.5488 0.158291 16.5488 -0.158291 16.3536 -0.353553L13.1716 -3.53553C12.9763 -3.7308 12.6597 -3.7308 12.4645 -3.53553C12.2692 -3.34027 12.2692 -3.02369 12.4645 -2.82843L15.2929 0L12.4645 2.82843C12.2692 3.02369 12.2692 3.34027 12.4645 3.53553C12.6597 3.7308 12.9763 3.7308 13.1716 3.53553L16.3536 0.353553ZM0 0.5H16V-0.5H0V0.5Z" transform="translate(0 4)" fill="#FF633B"/>
+            </svg>
+          </a>
+        </div>
+    </section>
+
     <section class="contact">
       <div class="container">
         <div class="row">
@@ -264,6 +306,31 @@
       </div>
     </footer>
 
+    <div class="modal">
+      <form id="c-form">
+        <div class="modal__inner">
+            <h3 class="modal__title title base-title"><span>Оставьте зявку и наши менеджеры свяжутся с вами</span></h3>
+            <div class="input-wrap">
+              <input type="text" name="name"  required>
+              <span>Ваше имя</span>
+            </div>
+            <div class="input-wrap">
+              <input type="email" name="email">
+              <span>Ваш E-mail</span>
+            </div>
+            <div class="input-wrap">
+              <input type="tel" name="phone" required>
+              <span>Ваш номер телефона</span>
+            </div>
+            <button type="submit" class="btn base-btn btn--default send">Отправить</button>
+            <div class="btn  btn--default btn--modal-close btn-close"><img class="icon icon--cross" src="img/menu-icon-close.svg"></div>
+        </div>
+      </form>
+    </div>
+    <div class="overlay"></div>
+
+     <!-- <button class="btn btn--default btn--modal-open">Delete all</button> -->
+     <div class="video-launch video-play-button btn--modal-open">Позвонить</div>
 
   </main>
 	<script src="js/scripts.min.js"></script>
@@ -272,6 +339,8 @@
       setTimeout(init, 1000);
 
       function init() {
+        $('.composition-logo').addClass('animated fadeInDown');
+        $('.composition-text').addClass('animated fadeInUp');
         document.body.classList.remove('loading');
 
           var scrollElemToWatch_1 = document.getElementById('rev-1'),       

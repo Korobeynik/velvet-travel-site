@@ -35,6 +35,12 @@
 	letter-spacing: -0.01em
 	color: #000000
 
+.special-offer
+	.base-btn
+		&:hover,&:focus
+			text-decoration: none
+			color: #fff
+			background-color: transparent
 .base-btn
 	text-transform: uppercase
 	border: 1px solid $orange2
@@ -79,6 +85,7 @@
 		
 @include placeholder()
 	color: #C4C4C4
+	font-size: 16px
 	@extend .type-style
 
 .aside-mobile
@@ -88,3 +95,224 @@
 	height: 100vh
 	img
 		max-width: 100%	
+
+.slider-item
+	height: 100vh
+	background-size: cover
+	background-position: bottom center
+	display: flex
+	align-items: center
+	justify-content: center
+
+.owl-dots
+	height: auto
+	position: absolute
+	right: 0
+	width: 80px
+	top: 50%
+	transform: translateY(-50%)
+	z-index: 1000
+	display: flex
+	flex-wrap: wrap
+	.owl-dot
+		display: block
+		width: 100%
+		height: 20px
+		border: none
+		margin-bottom: 20px
+		padding: 5px 0
+		position: relative
+		&:focus
+			outline: none
+		&:before
+			content: ""
+			display: block
+			width: 15px
+			height: 15px
+			background-color: #fff
+			border-radius: 50%
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			opacity: 0.5
+		&.active
+			&:before
+				opacity: 1
+			span
+				width: 100%
+				transform: translateX(0)
+		span
+			display: block
+			width: 0%
+			background-color: #fff
+			height: 1px
+			transition: transform 1s ease
+			transform: translateX(100%)
+
+
+.btn--modal-open
+	position: fixed
+	bottom: 50px
+	right: 50px
+	//z-index: 6000
+	background-color: green
+
+.modal
+	max-width: 420px
+	opacity: 0
+	//position: relative
+	.btn--modal-close.btn-close
+		position: absolute
+		right: 0
+		top: 0
+		&:hover
+			cursor: pointer
+	.base-btn
+		background-color: $orange
+		color: #fff
+		text-transform: none
+		font-weight: 300
+		margin: 0 auto
+		margin-top: 20px
+		display: block
+		&:hover
+			cursor: pointer
+			//background-color: #fff	
+	.modal__inner
+		background-color: #fff
+		input
+			width: 100%
+			height: 100%
+			padding: 8px
+			padding-bottom: 10px
+			margin-bottom: 5px
+			border: none
+			border-bottom: 1px solid #eee
+			text-align: center
+			color: #222
+			position: relative
+			z-index: 3
+			background-color: transparent
+			&:focus
+				border-bottom: 1px solid $orange
+			&:active + span
+				transform: translate(-50%, -18px)
+				font-size: 12px
+				color: $orange	
+			&:focus + span
+				transform: translate(-50%, -20px)
+				font-size: 12px
+				color: $orange
+			&.full + span
+				transform: translate(-50%, -20px)
+				font-size: 12px
+				color: $orange	
+		.input-wrap
+			margin-bottom: 15px
+			text-align: center
+			position: relative
+			span
+				font-size: 16px	
+				color: #ddd
+				transition: all 0.4s ease
+				position: absolute
+				top: 5px
+				left: 50%
+				transform: translateX(-50%)		
+	.title
+		text-align: center
+		width: 100%
+		margin-bottom: 3%
+		font-size: 24px
+		padding-top: 30px
+		span
+			padding-bottom: 70px
+			display: inline-block
+			background-image: url(../img/title-bg.svg)
+			background-repeat: no-repeat
+			background-position: 50% 70%
+	.block-revealer__element
+		width: 100%
+		z-index: 100
+
+.modal--open
+	z-index: 6000
+	opacity: 1
+
+.overlay
+	z-index: 1000	
+
+
+.video-play-button
+  position: fixed
+  z-index: 10
+  right: 50px
+  bottom: 50px
+  box-sizing: content-box
+  display: block
+  width: 32px
+  height: 44px
+  //margin: 40px auto 20px auto
+  border-radius: 50%
+  //padding: 18px 20px 18px 28px
+  box-shadow: 0 0px 30px rgba(255, 175, 21, 0.5)
+  &:before
+    content: ""
+    position: absolute
+    z-index: 0
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+    display: block
+    width: 80px
+    height: 80px
+    background: rgba(255, 175, 21, 0.65)
+    border-radius: 50%
+    animation: pulse-border 1500ms ease-out infinite
+  &:after
+    content: ""
+    position: absolute
+    z-index: 1
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+    display: block
+    width: 80px
+    height: 80px
+    background: white
+    border-radius: 50%
+    transition: all 200ms
+    transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1)
+  &:hover
+    &:after
+      background: #ffaf15
+      transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1)
+    span
+      border-left: 32px solid white
+  img
+    position: relative
+    z-index: 3
+    max-width: 100%
+    width: auto
+    height: auto
+  span
+    display: block
+    position: relative
+    z-index: 3
+    width: 0
+    height: 0
+    transform: scale(0.8)
+    border-left: 32px solid #ffaf15
+    border-top: 22px solid transparent
+    border-bottom: 22px solid transparent
+    transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+@keyframes pulse-border
+  0%
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1)
+    opacity: 1
+
+  100%
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5)
+    opacity: 0	
