@@ -43,6 +43,7 @@ gulp.task('js', function() {
 		'app/libs/waypoint/jquery.waypoints.min.js',
 		'app/libs/swipe/jquery.touchSwipe.min.js',
 		'app/libs/owlCarousel/owl.carousel.min.js',
+		'app/libs/nicescroll/jquery.nicescroll.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

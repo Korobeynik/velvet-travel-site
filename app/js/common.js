@@ -12,6 +12,17 @@ $(document).ready(function(){
 
 (function() {
 
+    $("html").niceScroll({
+        cursorcolor: "#FF7A52", // change cursor color in hex
+        cursoropacitymin: 0.5, // change opacity when cursor is inactive (scrollabar "hidden" state), range from 1 to 0
+        cursoropacitymax: 1, // change opacity when cursor is active (scrollabar "visible" state), range from 1 to 0
+        cursorwidth: "5px", // cursor width in pixel (you can also write "5px")
+        cursorborder: "1px solid #FF7A52", // css definition for cursor border
+        cursorborderradius: "10px", // border radius in pixel for cursor
+        scrollspeed: 100,
+        mousescrollstep: 50
+    });
+
     $('#c-form').submit(function(event) {
        event.preventDefault();
     });
@@ -24,14 +35,22 @@ $(document).ready(function(){
         loop:true,
         margin: 0,
         smartSpeed: 500,
-        autoplay:true,
-        autoplayTimeout:5000,
-        autoplayHoverPause:true
+        //autoplay: true,
+        autoplayTimeout: 20000,
+        autoplayHoverPause: false
     }).on('translate.owl.carousel', function() {
        $(this).find('.composition-text').removeClass('animated fadeInUp');
     }).on('translated.owl.carousel', function() {
        $(this).find('.composition-text').addClass('animated fadeInUp');
     });
+
+    $('.owl-carousel .composition-text').on('mouseleave',function(e){
+        $(this).closest('.owl-carousel').trigger('play.owl.autoplay');
+    })
+
+    $('.owl-carousel .composition-text').on('mouseenter',function(e){
+        $(this).closest('.owl-carousel').trigger('stop.owl.autoplay');
+    })
 
 
     $('.play').on('click',function(){
@@ -45,6 +64,18 @@ $(document).ready(function(){
     $(window).bind("load resize", function() {
 
     if($(window).width() < 600) {
+
+        $(document).scroll(function() {
+            if (!$('.menu').hasClass('menu--open')) {
+              //closeMenu();
+              setTimeout(function(){
+                  $('.aside-panel').addClass('mobile');
+                }, 500);
+            }
+
+        });
+
+        $("html").getNiceScroll().remove();
          setTimeout(function(){
               $('.aside-panel').addClass('mobile');
             }, 2000);
@@ -57,13 +88,7 @@ $(document).ready(function(){
         $('.aside-panel').removeClass('mobile');
     });
 
-    $(document).scroll(function() {
-    $('.menu').removeClass('menu--open');
-    $('.menu').css('dispplay', 'none');;
-     setTimeout(function(){
-          $('.aside-panel').addClass('mobile');
-        }, 500);
-    });
+
 
   //   $(document).swipe( {
   //   //Generic swipe handler for all directions
